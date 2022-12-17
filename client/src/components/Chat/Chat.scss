@@ -1,0 +1,121 @@
+@use "../common/sass/variables" as v;
+
+.PrivChat {
+	&.container {
+		height: 100vh;
+		padding-top: 120px;
+	}
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	.chatter {
+		width: 100%;
+		text-align: center;
+		font-size: 24px;
+		color: v.$color--light;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+
+	.messages > div {
+		display: flex;
+		gap: 23px;
+		flex-direction: column;
+		align-items: stretch;
+		height: auto;
+		max-height: calc(100vh - 280px);
+		padding-top: 30px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding-right: 10px;
+
+
+		/* width */
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px v.$color--darkest;
+			border-radius: 10px;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: v.$color--gray;
+			border-radius: 10px;
+		}
+
+		.message__body {
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			gap: 9px;
+			justify-content: flex-start;
+			align-self: flex-end;
+
+			&.got {
+				justify-content: flex-end;
+				flex-direction: row-reverse;
+				align-self: flex-start;
+
+				.message__text {
+					border-radius: 15px 15px 15px 0;
+				}
+			}
+
+			.message__text {
+				background-color: v.$color--darkest;
+				padding: 15px 20px;
+				border-radius: 15px 15px 0 15px;
+				color: v.$color--light;
+				word-wrap: break-word;
+				word-break: break-all;
+			}
+
+			.message__avatar {
+				width: 30px;
+				height: 30px;
+				border-radius: 10px;
+			}
+		}
+	}
+
+	form {
+		margin-top: auto;
+		margin-bottom: 20px;
+		background: none;
+		display: flex;
+		gap: 10px;
+
+		input[type=text] {
+			background-color: v.$color--darkest;
+			color: v.$color--light;
+			padding: 15px 20px;
+			font-size: 16px;
+			line-height: 1.5;
+			border-radius: 15px;
+			width: 100%;
+		}
+
+		button {
+			padding: 11px 11px 9px 9px;
+			background-color: v.$color--main;
+			border-radius: 15px;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+
+			&:hover {
+				background-color: v.$color--accent;
+			}
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}

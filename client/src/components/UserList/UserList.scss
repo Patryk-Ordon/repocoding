@@ -1,0 +1,47 @@
+@use "../common/sass/variables" as v;
+
+.UserList {
+	h3 {
+		margin-top: 30px;
+		color: v.$color--light;
+	}
+
+	.Friends {
+		margin-top: 20px;
+		display: flex;
+		gap: 30px;
+	}
+
+	.FriendInfo {
+		background-color: v.$color--accent2;
+		display: inline-flex;
+		align-items: center;
+		gap: 15px;
+		padding: 15px;
+		max-width: 1440px;
+		border-radius: 20px;
+
+		.Friend__avatar {
+			img {
+				margin-top: 10px;
+				width: 50px;
+				height: 50px;
+				border-radius: 15px;
+			}
+		}
+
+		.Friend {
+			&__name {
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: v.$color--light;
+			}
+
+			&__id {
+				font-size: 0.9rem;
+				font-weight: 300;
+				color: v.$color--light;
+			}
+		}
+	}
+}

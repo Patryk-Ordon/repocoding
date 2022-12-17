@@ -1,0 +1,80 @@
+@use '../common/sass/variables' as v;
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    height: auto;
+    min-height: 90px;
+    background-color: v.$color--darker;
+    border-radius: 0px 0px 25px 25px;
+    align-items: center;
+    column-gap: 20px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .h {
+        font-size: 16px;
+        color: v.$color--light;
+        font-family: Poppins;
+        margin-top: 0;
+    }
+
+    .first {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        padding-left: 20px;
+    }
+    
+    .second {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        column-gap: 20px;
+        padding-right: 20px;
+    }
+
+    .addroom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        padding: 0 23px;
+        background-color: v.$color--main;
+        border-radius: 0 25px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        cursor: pointer;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .settings {
+        height: 30px;
+        width: 30px;
+        background-image: url('../../resources/icons/settings.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .out {
+        height: 30px;
+        width: 30px;
+        background-image: url('../../resources/icons/sign-out.svg');
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+}

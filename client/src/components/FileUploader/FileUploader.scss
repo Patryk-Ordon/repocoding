@@ -1,0 +1,41 @@
+@use "../common/sass/variables" as v;
+
+h2 {
+    margin-top: 50px;
+    color: v.$color--light;
+}
+
+form {
+    display: inline-block;
+    background-color: v.$color--darker;
+    margin-top: 20px;
+    padding: 20px;
+    color: v.$color--light;
+    border-radius: 15px;
+    text-align: center;
+
+    label {
+        display: block;
+        margin-bottom: 20px;
+
+        input {
+            background-color: v.$color--darkest;
+            padding: 9px 20px;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 10px;
+            color: v.$color--light;
+            border-radius: 15px;
+
+            &.submit {
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: v.$color--main;
+                    color: v.$color--black;
+                }
+            }
+        }
+    }
+}

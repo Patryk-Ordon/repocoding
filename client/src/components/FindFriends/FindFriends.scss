@@ -1,0 +1,99 @@
+@use "../common/sass/variables" as v;
+
+.Dashboard {
+	&.container {
+		padding-top: 120px;
+	}
+
+	.UserInfo {
+		background-color: v.$color--accent2;
+		display: inline-flex;
+		align-items: center;
+		gap: 20px;
+		padding: 20px;
+		padding-right: 20vw;
+		max-width: 1440px;
+		border-radius: 20px;
+
+		.User__avatar {
+			img {
+				margin-top: 10px;
+				width: 70px;
+				height: 70px;
+				border-radius: 15px;
+			}
+		}
+
+		.User {
+			&__name {
+				font-size: 1.7rem;
+				font-weight: 600;
+				color: v.$color--light;
+			}
+
+			&__mail {
+				font-size: 1rem;
+				font-weight: 300;
+				color: v.$color--light;
+
+				display: flex;
+				align-items: center;
+				gap: 7px;
+
+				img {
+					filter: invert(1);
+					height: 1rem;
+					width: auto;
+				}
+			}
+
+			&__id {
+				font-size: 1rem;
+				font-weight: 300;
+				color: v.$color--light;
+			}
+		}
+	}
+
+	.FindFriends {
+		h2 {
+			margin-top: 50px;
+			color: v.$color--light;
+		}
+
+		form {
+			display: inline-block;
+			background-color: v.$color--darker;
+			margin-top: 20px;
+			padding: 20px;
+			color: v.$color--light;
+			border-radius: 15px;
+			text-align: center;
+
+			label {
+				display: block;
+				margin-bottom: 20px;
+
+				input {
+					background-color: v.$color--darkest;
+					padding: 9px 20px;
+					font-size: 15px;
+					line-height: 1.6;
+					margin-top: 10px;
+					color: v.$color--light;
+					border-radius: 15px;
+
+					&.submit {
+						cursor: pointer;
+						transition: all 0.2s ease-in-out;
+
+						&:hover {
+							background-color: v.$color--main;
+							color: v.$color--black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
